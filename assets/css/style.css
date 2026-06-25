@@ -290,8 +290,8 @@ body{
 
     position:fixed;
 
-    left:50%;
-    bottom:18px;
+    left:5%;
+    bottom:30px;
 
     transform:translateX(-50%);
 
@@ -328,6 +328,10 @@ body{
 
     #pageNumber{
 
+        
+        left:50%;
+        bottom:18px;
+
         bottom:12px;
 
         padding:6px 14px;
@@ -345,6 +349,9 @@ body{
 @media (max-width:480px){
 
     #pageNumber{
+
+        left:50%;
+        bottom:18px;
 
         bottom:10px;
 
