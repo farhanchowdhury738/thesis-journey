@@ -44,7 +44,7 @@ const pageFlip = new St.PageFlip(
 
         mobileScrollSupport: false,
 
-        flippingTime: 1200,
+        flippingTime: 2000,
 
         drawShadow: true,
 
