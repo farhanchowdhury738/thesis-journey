@@ -91,7 +91,7 @@ pageFlip.on("flip", () => {
 });
 
 // =========================
-// NEXT BUTTON
+// DESKTOP BUTTONS
 // =========================
 
 document.getElementById("nextBtn").addEventListener("click", () => {
@@ -100,15 +100,28 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
 });
 
-// =========================
-// PREVIOUS BUTTON
-// =========================
-
 document.getElementById("prevBtn").addEventListener("click", () => {
 
     pageFlip.flipPrev();
 
 });
+
+// =========================
+// MOBILE BUTTONS
+// =========================
+
+document.getElementById("nextBtnMobile").addEventListener("click", () => {
+
+    pageFlip.flipNext();
+
+});
+
+document.getElementById("prevBtnMobile").addEventListener("click", () => {
+
+    pageFlip.flipPrev();
+
+});
+
 
 // =========================
 // KEYBOARD

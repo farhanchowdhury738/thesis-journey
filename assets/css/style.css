@@ -136,6 +136,8 @@ body{
     background:#fff;
 }
 
+
+
 /* =========================
    PROFESSIONAL TRANSPARENT NAVIGATION
 ========================= */
@@ -157,7 +159,6 @@ body{
 
     color:#ffffff;
 
-    /* Fully Transparent */
     background:transparent;
     backdrop-filter:none;
     -webkit-backdrop-filter:none;
@@ -184,9 +185,7 @@ body{
 
 .nav:hover{
     transform:translateY(-3px) scale(1.06);
-
     background:rgba(255,255,255,.08);
-
     border-color:#ffffff;
 }
 
@@ -199,16 +198,26 @@ body{
     border-color:#ffffff;
 }
 
+/* Mobile Navigation */
+
+.mobile-nav{
+    display:none;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+}
 
 /* Desktop */
 
 @media (min-width:1200px){
 
     #book{
-
         width:1120px;
         height:792px;
+    }
 
+    .mobile-nav{
+        display:none;
     }
 
 }
@@ -218,10 +227,12 @@ body{
 @media (max-width:1199px){
 
     #book{
-
         width:900px;
         height:636px;
+    }
 
+    .mobile-nav{
+        display:none;
     }
 
 }
@@ -234,20 +245,38 @@ body{
         width:100%;
         height:100%;
         display:flex;
+        flex-direction:column;
         justify-content:center;
         align-items:center;
-        padding:0;
-        gap:0;
-    }
-
-    .nav{
-        display:none;
+        gap:18px;
+        padding:20px;
     }
 
     #book{
         width:340px;
         height:480px;
         margin:0 auto;
+    }
+
+    /* Hide desktop side buttons */
+    .viewer > .nav{
+        display:none;
+    }
+
+    /* Show bottom buttons */
+    .mobile-nav{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:16px;
+        width:100%;
+    }
+
+    .mobile-nav .nav{
+        display:flex;
+        width:50px;
+        height:50px;
+        font-size:22px;
     }
 
 }
