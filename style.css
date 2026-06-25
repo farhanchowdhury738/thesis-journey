@@ -1,0 +1,283 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#d9d9d9;
+
+    overflow:hidden;
+
+}
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(135deg,#f3f3f3,#d6d6d6);
+
+    z-index:-1;
+
+}
+
+.viewer{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+#book{
+
+    width:900px;
+
+    height:620px;
+
+}
+
+.page{
+
+    background:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.cover{
+
+    background:#4b2e83;
+
+    color:white;
+
+}
+
+.cover h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.cover p{
+
+    font-size:24px;
+
+}
+
+button{
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+}
+
+
+
+/* ===========================
+   DESIGN SYSTEM
+=========================== */
+
+:root{
+    --paper:#faf7f2;
+    --paper-dark:#f1ede6;
+    --shadow:rgba(0,0,0,.18);
+
+    --title:#222;
+    --text:#444;
+
+    --accent:#8b6b4f;
+
+    --radius:12px;
+}
+
+.page{
+
+    background:var(--paper);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.page::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,255,255,.7),
+    transparent 50%);
+
+    pointer-events:none;
+
+}
+
+.magazine{
+
+    width:100%;
+
+    height:100%;
+
+    padding:45px;
+
+    position:relative;
+
+}
+
+/* Title */
+
+.title{
+
+    font-size:46px;
+
+    font-weight:bold;
+
+    color:var(--title);
+
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+
+    font-size:22px;
+
+    color:#666;
+
+    margin-bottom:40px;
+
+}
+
+/* Paragraph */
+
+.text{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:var(--text);
+
+}
+
+/* Polaroid */
+
+.polaroid{
+
+    background:white;
+
+    padding:12px;
+
+    width:230px;
+
+    box-shadow:
+
+    0 12px 25px rgba(0,0,0,.18);
+
+    position:absolute;
+
+    transition:.35s;
+
+}
+
+.polaroid:hover{
+
+    transform:scale(1.03);
+
+}
+
+.polaroid img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.caption{
+
+    margin-top:10px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+/* Tape */
+
+.tape{
+
+    position:absolute;
+
+    width:70px;
+
+    height:22px;
+
+    background:
+
+    rgba(255,248,200,.75);
+
+    top:-10px;
+
+    left:50%;
+
+    transform:translateX(-50%) rotate(-6deg);
+
+    border-radius:3px;
+
+}
+
+/* Page Number */
+
+.page-number{
+
+    position:absolute;
+
+    bottom:18px;
+
+    right:30px;
+
+    font-size:16px;
+
+    color:#888;
+
+}
