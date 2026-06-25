@@ -44,7 +44,7 @@ const pageFlip = new St.PageFlip(
 
         mobileScrollSupport: false,
 
-        flippingTime: 2000,
+        flippingTime: 1800,
 
         drawShadow: true,
 
@@ -96,13 +96,29 @@ pageFlip.on("flip", () => {
 
 document.getElementById("nextBtn").addEventListener("click", () => {
 
-    pageFlip.flipNext();
+    if (pageFlip.getCurrentPageIndex() === pageFlip.getPageCount() - 1) {
+
+        pageFlip.flip(0);
+
+    } else {
+
+        pageFlip.flipNext();
+
+    }
 
 });
 
 document.getElementById("prevBtn").addEventListener("click", () => {
 
-    pageFlip.flipPrev();
+    if (pageFlip.getCurrentPageIndex() === 0) {
+
+        pageFlip.flip(pageFlip.getPageCount() - 1);
+
+    } else {
+
+        pageFlip.flipPrev();
+
+    }
 
 });
 
@@ -112,13 +128,29 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 
 document.getElementById("nextBtnMobile").addEventListener("click", () => {
 
-    pageFlip.flipNext();
+    if (pageFlip.getCurrentPageIndex() === pageFlip.getPageCount() - 1) {
+
+        pageFlip.flip(0);
+
+    } else {
+
+        pageFlip.flipNext();
+
+    }
 
 });
 
 document.getElementById("prevBtnMobile").addEventListener("click", () => {
 
-    pageFlip.flipPrev();
+    if (pageFlip.getCurrentPageIndex() === 0) {
+
+        pageFlip.flip(pageFlip.getPageCount() - 1);
+
+    } else {
+
+        pageFlip.flipPrev();
+
+    }
 
 });
 
