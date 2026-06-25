@@ -72,6 +72,25 @@ pageFlip.loadFromHTML(
 
 );
 
+// page num add 
+
+const pageNumber = document.getElementById("pageNumber");
+
+const totalPages = pageFlip.getPageCount();
+
+function updatePageNumber(){
+
+    const current = pageFlip.getCurrentPageIndex() + 1;
+
+    pageNumber.textContent = `${current} / ${totalPages}`;
+
+}
+
+updatePageNumber();
+
+pageFlip.on("flip", updatePageNumber);
+
+
 // =========================
 // PAGE FLIP SOUND
 // =========================
